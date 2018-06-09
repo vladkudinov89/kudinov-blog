@@ -89,7 +89,7 @@ class Post extends Model
     public function getImage()
     {
         if($this->image == null){
-            return '/img/no-image.png';
+            return '/img/no-user-image.png';
         }
         return '/uploads' . $this->image;
     }
