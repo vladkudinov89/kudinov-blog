@@ -40,7 +40,7 @@
                             <label>Категория</label>
                             {{Form::select(
                             'category_id',
-                             ['1' => 'Large', '2' => 'Small'],
+                             $categories,
                             null,
                              ['class' => 'form-control select2'])
                              }}
@@ -50,7 +50,7 @@
                             <label>Теги</label>
                             {{Form::select(
                             'tags[]',
-                             ['1' => 'Large', '2' => 'Small'],
+                             $tags,
                             null,
                              [
                              'class' => 'form-control select2',
