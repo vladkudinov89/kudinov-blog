@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Support\Facades\Storage;
@@ -178,6 +179,12 @@ class Post extends Model
             return implode(" , ", $this->tags->pluck('title')->all());
         }
         return "Нет тегов";
+    }
+
+    public function getDateAttribute($value)
+    {
+        $date = Carbon::createFromFormat('Y-m-d' , $value)->format('d/m/y');
+        return $date;
     }
 
 

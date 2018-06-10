@@ -44,7 +44,6 @@
                             null,
                              ['class' => 'form-control select2'])
                              }}
-                            {{Form::close()}}
                         </div>
                         <div class="form-group">
                             <label>Теги</label>
@@ -58,7 +57,6 @@
                              'data-placeholder' => 'Выберите теги',
                              ])
                              }}
-                            {{Form::close()}}
                         </div>
                         <!-- Date -->
                         <div class="form-group">
