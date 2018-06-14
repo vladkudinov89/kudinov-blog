@@ -21,3 +21,31 @@ $factory->define(App\User::class, function (Faker $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\Post::class, function (Faker $faker) {
+    return [
+        'title' => $faker->sentence,
+        'content' => $faker->sentence,
+        'image' => 'photo1.png',
+        'date' => '08/09/17',
+        'views' => $faker->numberBetween(0,5000),
+        'category_id' => $faker->numberBetween($min = 6, $max = 10),
+        'user_id' => 1,
+        'status' => 1,
+        'is_featured' => 0,
+        'description' => $faker->sentence($nbWords = 8, $variableNbWords = true)
+
+    ];
+});
+
+$factory->define(App\Category::class, function (Faker $faker) {
+    return [
+        'title' => $faker->word,
+    ];
+});
+
+$factory->define(App\Tag::class, function (Faker $faker) {
+    return [
+        'title' => $faker->word,
+    ];
+});
