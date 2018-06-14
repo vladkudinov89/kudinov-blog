@@ -12,7 +12,7 @@ class Post extends Model
 
     use Sluggable;
 
-    protected $fillable = ['title', 'content', 'date'];
+    protected $fillable = ['title', 'content', 'date' , 'description'];
 
     const IS_DRAFT = 0;
     const IS_PUBLIC = 1;
@@ -166,11 +166,9 @@ class Post extends Model
 
     public function getCategoryTitle()
     {
-        if ($this->category != null) {
-            return $this->category->title;
-        }
-
-        return "Нет категории";
+        return ($this->category != null)
+            ?   $this->category->title
+            :   'Нет категории';
     }
 
     public function getTagsTitles()
@@ -185,6 +183,21 @@ class Post extends Model
     {
         $date = Carbon::createFromFormat('Y-m-d' , $value)->format('d/m/y');
         return $date;
+    }
+
+    public function getCategoryID()
+    {
+        return $this->category != null ? $this->category->id : null;
+    }
+
+//    public function getTagID()
+//    {
+//        return $this->tags != null ? $this->tags : null;
+//    }
+
+    public function getDate()
+    {
+       return Carbon::createFromFormat('d/m/y' , $this->date)->format('F d, Y');
     }
 
 
