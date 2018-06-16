@@ -1594,7 +1594,7 @@ create-ecdh@^4.0.0:
 
 create-error-class@^3.0.1:
   version "3.0.2"
-  resolved "https://registry.yarnpkg.com/create-error-class/-/create-error-class-3.0.2.tgz#06be7abef947a3f14a30fd610671d401bca8b7b6"
+  resolved "https://registry.yarnpkg.com/create-errors-class/-/create-errors-class-3.0.2.tgz#06be7abef947a3f14a30fd610671d401bca8b7b6"
   dependencies:
     capture-stack-trace "^1.0.0"
 
@@ -2252,13 +2252,13 @@ errno@^0.1.3, errno@~0.1.7:
 
 error-ex@^1.2.0:
   version "1.3.1"
-  resolved "https://registry.yarnpkg.com/error-ex/-/error-ex-1.3.1.tgz#f855a86ce61adc4e8621c3cda21e7a7612c3a8dc"
+  resolved "https://registry.yarnpkg.com/errors-ex/-/errors-ex-1.3.1.tgz#f855a86ce61adc4e8621c3cda21e7a7612c3a8dc"
   dependencies:
     is-arrayish "^0.2.1"
 
 error-stack-parser@^2.0.0:
   version "2.0.2"
-  resolved "https://registry.yarnpkg.com/error-stack-parser/-/error-stack-parser-2.0.2.tgz#4ae8dbaa2bf90a8b450707b9149dcabca135520d"
+  resolved "https://registry.yarnpkg.com/errors-stack-parser/-/errors-stack-parser-2.0.2.tgz#4ae8dbaa2bf90a8b450707b9149dcabca135520d"
   dependencies:
     stackframe "^1.0.4"
 
@@ -2843,7 +2843,7 @@ friendly-errors-webpack-plugin@^1.6.1:
   resolved "https://registry.yarnpkg.com/friendly-errors-webpack-plugin/-/friendly-errors-webpack-plugin-1.7.0.tgz#efc86cbb816224565861a1be7a9d84d0aafea136"
   dependencies:
     chalk "^1.1.3"
-    error-stack-parser "^2.0.0"
+    errors-stack-parser "^2.0.0"
     string-width "^2.0.0"
 
 from2@^2.1.0:
@@ -3084,7 +3084,7 @@ got@^5.0.0:
   version "5.7.1"
   resolved "https://registry.yarnpkg.com/got/-/got-5.7.1.tgz#5f81635a61e4a6589f180569ea4e381680a51f35"
   dependencies:
-    create-error-class "^3.0.1"
+    create-errors-class "^3.0.1"
     duplexer2 "^0.1.4"
     is-redirect "^1.0.0"
     is-retry-allowed "^1.0.0"
@@ -5156,7 +5156,7 @@ parse-json@^2.1.0, parse-json@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/parse-json/-/parse-json-2.2.0.tgz#f480f40434ef80741f8469099f8dea18f55a4dc9"
   dependencies:
-    error-ex "^1.2.0"
+    errors-ex "^1.2.0"
 
 parseurl@~1.3.2:
   version "1.3.2"
