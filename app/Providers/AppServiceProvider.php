@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Category;
+use App\Post;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +15,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        view()->composer('pages._sidebar' , function ($view){
+            $view->with('postsPopular' , Post::getPostsPopular());
+            $view->with('postsFeature' , Post::getPostsFeature());
+            $view->with('postsRecent' , Post::getPostsRecent());
+            $view->with('categories' , Category::all());
+        });
     }
 
     /**
