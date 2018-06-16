@@ -1364,7 +1364,7 @@
                     //apply mask
                     checkVal(el, true, false);
                     valueOnFocus = getActiveBuffer().join('');
-                    // Wrap document.activeElement in a try/catch block since IE9 throw "Unspecified error" if document.activeElement is undefined when we are in an IFrame.
+                    // Wrap document.activeElement in a try/catch block since IE9 throw "Unspecified errors" if document.activeElement is undefined when we are in an IFrame.
                     var activeElement;
                     try {
                         activeElement = document.activeElement;

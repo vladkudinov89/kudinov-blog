@@ -15,4 +15,14 @@ class HomeController extends Controller
            'posts' => $posts
        ]);
     }
+
+    public function show($slug)
+    {
+        $post = Post::where('slug' , $slug)->firstOrFail();
+        //dd($post->id);
+//        return view('pages.show' , [
+//            'post' => $post
+//        ]);
+        return view('pages.show' ,compact('post'));
+    }
 }
