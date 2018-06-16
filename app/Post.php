@@ -232,5 +232,20 @@ class Post extends Model
         return $this->category != null ? true : false;
     }
 
+    public static function getPostsPopular()
+    {
+        return self::orderBy('views' , 'desc')->take(3)->get();
+    }
+
+    public static function getPostsFeature()
+    {
+        return self::where('is_featured' , 1)->take(3)->get();
+    }
+
+    public static function getPostsRecent()
+    {
+        return self::orderBy('date' , 'desc')->take(4)->get();
+    }
+
 
 }
