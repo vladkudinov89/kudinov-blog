@@ -18,9 +18,9 @@
                             </div>
                             <div class="post-content">
                                 <header class="entry-header text-center text-uppercase">
-                                    <h6><a href="#"> {{$post->getCategoryTitle()}}</a></h6>
-
-                                    <h1 class="entry-title"><a href="{{route('post.show' , $post->slug) }}">{{$post->title}}</a></h1>
+                                    @include('partials._category' , ['posts' => $posts])
+                                    <h1 class="entry-title"><a
+                                                href="{{route('post.show' , $post->slug) }}">{{$post->title}}</a></h1>
 
 
                                 </header>
@@ -30,7 +30,8 @@
                                     </p>
 
                                     <div class="btn-continue-reading text-center text-uppercase">
-                                        <a href="{{route('post.show' , $post->slug) }}" class="more-link">Continue Reading</a>
+                                        <a href="{{route('post.show' , $post->slug) }}" class="more-link">Continue
+                                            Reading</a>
                                     </div>
                                 </div>
                                 <div class="social-share">
@@ -49,11 +50,11 @@
 
                     {{$posts->links()}}
                     {{--<ul class="pagination">--}}
-                        {{--<li class="active"><a href="#">1</a></li>--}}
-                        {{--<li><a href="#">2</a></li>--}}
-                        {{--<li><a href="#">3</a></li>--}}
-                        {{--<li><a href="#">4</a></li>--}}
-                        {{--<li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>--}}
+                    {{--<li class="active"><a href="#">1</a></li>--}}
+                    {{--<li><a href="#">2</a></li>--}}
+                    {{--<li><a href="#">3</a></li>--}}
+                    {{--<li><a href="#">4</a></li>--}}
+                    {{--<li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>--}}
                     {{--</ul>--}}
                 </div>
                 <div class="col-md-4" data-sticky_column>
