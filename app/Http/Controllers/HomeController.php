@@ -6,11 +6,13 @@ use App\Category;
 use App\Post;
 use App\Tag;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
     public function index()
     {
+//        dd(Auth::check());
         $posts = Post::paginate(2);
 
 //        $postsPopular = Post::orderBy('views' , 'desc')->take(3)->get();
