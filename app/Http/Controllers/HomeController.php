@@ -44,6 +44,7 @@ class HomeController extends Controller
 //        return view('pages.show' , [
 //            'post' => $post
 //        ]);
+        //dd($post->comments);
         return view('pages.show' ,compact('post'));
     }
 
