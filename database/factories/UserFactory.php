@@ -46,6 +46,15 @@ $factory->define(App\Category::class, function (Faker $faker) {
 
 $factory->define(App\Tag::class, function (Faker $faker) {
     return [
-        'title' => $faker->word,
+        'text' => $faker->word,
+    ];
+});
+
+$factory->define(App\Comment::class, function (Faker $faker) {
+    return [
+        'text' => $faker->sentence($nbWords = 8, $variableNbWords = true),
+        'user_id' => $faker->numberBetween(6,10),
+        'post_id' => 44,
+        'status' => $faker->numberBetween(0,1),
     ];
 });
