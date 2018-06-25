@@ -38,6 +38,12 @@ class Comment extends Model
 
     }
 
+    public function getPostComments()
+    {
+        return Post::where('id' , $this->post_id)->pluck('slug')[0];
+
+    }
+
 //    public function remove()
 //    {
 //        $this->delete();

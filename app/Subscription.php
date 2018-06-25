@@ -16,6 +16,16 @@ class Subscription extends Model
         return $sub;
     }
 
+    public static function addSubsAdmin($email)
+    {
+        $subAdmin = new static;
+        $subAdmin->email = $email;
+        $subAdmin->token = null;
+        $subAdmin->save();
+
+        return $subAdmin;
+    }
+
     public function remove()
     {
         $this->delete();
