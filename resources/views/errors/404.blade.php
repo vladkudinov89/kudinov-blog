@@ -35,7 +35,7 @@
                 <div class="msg">OH!<span class="triangle"></span></div>
             </div>
             <h2 class="h1">Sorry! Page not found</h2>
-            <a href="/" class="btn btn-success btn-lg" style="margin-bottom: 20px">Go Back</a>
+            <a href="{{ url()->previous() }}" class="btn btn-success btn-lg" style="margin-bottom: 20px">Go Back</a>
         </div>
     </div>
 </div>
