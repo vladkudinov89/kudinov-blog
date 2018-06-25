@@ -57,6 +57,7 @@ mix.styles([
         'resources/assets/front/css/owl.transitions.css',
         'resources/assets/front/css/style.css',
         'resources/assets/front/css/responsive.css',
+        'resources/assets/front/css/404.css',
 ] ,
     'public/css/front.css');
 
@@ -66,9 +67,10 @@ mix.scripts([
     'resources/assets/front/js/owl.carousel.min.js',
     'resources/assets/front/js/jquery.stickit.min.js',
     'resources/assets/front/js/menu.js',
-    'resources/assets/front/js/scripts.js',
+    'resources/assets/front/js/scripts.js'
 
 ] , 'public/js/front.js');
 
 mix.copy('resources/assets/front/fonts' , 'public/fonts');
 mix.copy('resources/assets/front/images' , 'public/images');
+mix.copy('resources/assets/front/js/404.js' , 'public/js/404.js');
