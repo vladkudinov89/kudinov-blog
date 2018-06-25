@@ -34,6 +34,7 @@
                         <tr>
                             <th>ID</th>
                             <th>Текст</th>
+                            <th>Пост</th>
                             <th>Действия</th>
                         </tr>
                         </thead>
@@ -42,6 +43,10 @@
                             <tr>
                                 <td>{{$comment->id}}</td>
                                 <td>{{$comment->text}}
+                                </td>
+                                <td><a target="_blank" href="/post/{{$comment->getPostComments()}}">
+                                        {{$comment->getPostComments()}}
+                                    </a>
                                 </td>
                                 <td >
 
